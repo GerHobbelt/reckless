@@ -119,14 +119,10 @@ static_assert(false, "spsc_event is not implemented for Windows on this compiler
 #endif
 
 #include <cassert>
+#include <windows.h>
 
 namespace reckless {
 namespace detail {
-
-extern "C" {
-    unsigned long __stdcall WaitForSingleObject(void* hHandle, unsigned long dwMilliseconds);
-    int __stdcall SetEvent(void* hEvent);
-}
 
 class spsc_event {
 public:

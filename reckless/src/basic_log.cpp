@@ -30,6 +30,10 @@
 #include <sstream>      // ostringstream
 #include <chrono>       // hours
 
+ // Win32/MSVC quick fix
+#undef max
+#undef min
+
 using reckless::detail::likely;
 
 namespace reckless {

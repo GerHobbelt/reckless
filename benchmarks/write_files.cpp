@@ -4,8 +4,12 @@
 #include <fstream>
 #include <cassert>
 #include <fcntl.h>
+#if defined(__unix__)
 #include <unistd.h>
 #include <sys/stat.h>
+#elif defined(_WIN32)
+#include <Windows.h>
+#endif
 
 #include LOG_INCLUDE
 

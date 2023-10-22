@@ -33,6 +33,10 @@
 #include <cassert>
 #include <algorithm>    // max, min
 
+ // Win32/MSVC quick fix
+#undef max
+#undef min
+
 namespace reckless {
 
 #ifdef RECKLESS_ENABLE_TRACE_LOG

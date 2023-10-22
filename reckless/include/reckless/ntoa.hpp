@@ -25,6 +25,10 @@
 
 #include <limits>
 
+// Win32/MSVC quick fix
+#undef max
+#undef min
+
 namespace reckless {
 
 unsigned const UNSPECIFIED_PRECISION = std::numeric_limits<unsigned>::max();
